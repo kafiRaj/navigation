@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayId"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/mToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavId"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            app:itemIconTint="@color/navitemcolor"
+            app:itemTextColor="@color/navitemcolor"
+            app:menu="@menu/bottom_nav_menu_item"
+            app:labelVisibilityMode="labeled"
+            />
+
+
+    </RelativeLayout>
+
+
+<com.google.android.material.navigation.NavigationView
+    android:id="@+id/navViewId"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/abc_action_bar_default_height_material"
+    app:menu="@menu/nav_menuitem"
+    android:background="@color/white"
+    android:layout_gravity="start"
+    app:headerLayout="@layout/navigation_header"
+    />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
